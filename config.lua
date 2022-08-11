@@ -6,13 +6,14 @@
 
 Skirata= {
     VehicleList = {
-        GetHashKey("lazer"),
-        GetHashKey("hydra"),
+        GetHashKey("LAZER"),
+        GetHashKey("HYDRA"),
     },
     WeaponList = {
         100416529,
         205991906,
         -952879014,
         GetHashKey("WEAPON_AXMC"),
+        GetHashKey("WEAPON_M700A"),
     },
 }

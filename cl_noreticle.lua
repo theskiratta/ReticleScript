@@ -55,7 +55,6 @@ Citizen.CreateThread(function()
 		elseif IsPedInAnyVehicle(PedID, false) then 
 			if IsInAllowedVehicle() then
 				ReticleAllowed = true
-				print("allowed because vehicle")
 			else
 				ReticleAllowed = false
 			end

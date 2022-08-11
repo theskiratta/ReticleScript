@@ -46,7 +46,6 @@ end
 -- CHECKS IF RETICLE ALLOWED
 Citizen.CreateThread(function()
 	local ReticleAllowed = false
-	local PedID = GetPlayerPed(-1)
 	while true do
 		Citizen.Wait(0)
 

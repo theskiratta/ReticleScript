@@ -28,13 +28,9 @@ function IsInAllowedVehicle() -- Checks if conditions are met for reticle allowe
 	CurrentVehicle = GetVehiclePedIsIn(PedID, true)
 	if Skirata.UseVehicleClass then
 		VehClass = GetVehicleClass(CurrentVehicle)
-		print("Checks vehicle class")
-		print(VehClass)
 		if VehClass == 15 then
-			print("Class 15")
 			return true
 		elseif VehClass == 16 then
-			print("Class 16")
 			return true
 		else
 			return false

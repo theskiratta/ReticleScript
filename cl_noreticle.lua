@@ -26,7 +26,20 @@ end
 function IsInAllowedVehicle() -- Checks if conditions are met for reticle allowed
 	PedID = GetPlayerPed(-1)
 	CurrentVehicle = GetVehiclePedIsIn(PedID, true)
-	if IsValidVehicle(CurrentVehicle) then
+	if Skirata.UseVehicleClass then
+		VehClass = GetVehicleClass(CurrentVehicle)
+		print("Checks vehicle class")
+		print(VehClass)
+		if VehClass == 15 then
+			print("Class 15")
+			return true
+		elseif VehClass == 16 then
+			print("Class 16")
+			return true
+		else
+			return false
+		end
+	elseif IsValidVehicle(CurrentVehicle) then
 		return true
 	else
 		return false
@@ -47,7 +60,7 @@ end
 Citizen.CreateThread(function()
 	local ReticleAllowed = false
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(1)
 
 		if IsAllowedWeapon() then
 			ReticleAllowed = true
